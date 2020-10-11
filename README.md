@@ -6,6 +6,7 @@
 Provides an easy way to fetch contents from a remote ZIP files and sync/extract them to a local destination dir.
 Note that during download and extraction the contents will not be consistent.
 Not thread-safe - so take care and check the documentation.
+If you use the cli, check the -h option for configurable options.
 
 ## Installation
 ```
@@ -17,18 +18,18 @@ pip install simple-zip-deploy
 Windows CLI:
 
 # Executes the check every 15 seconds
-zip-deploy.exe "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
+zip-deploy.exe  --content-destination "./movies" --update-interval 15 "http://your-url.domain/movies.zip"
 ```
 
 Unix cli:
 ```
 # Executes the check every 15 seconds
-zip-deploy "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
+zip-deploy  --content-destination "./movies" --update-interval 15 "http://your-url.domain/movies.zip"
 ```
 
 As python module:
 ````
-python -m zipdeploy.zipdeploy http://your-url.domain/movies.zip  --content-destination /dev/shm/your/target/destination --update-interval 15
+python -m zipdeploy.zipdeploy --content-destination /dev/shm/your/target/destination --update-interval 15 http://your-url.domain/movies.zip  
 ````
 
 In your own code (no periodic checks included, threading is your job):

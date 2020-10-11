@@ -186,7 +186,7 @@ def main_func():
     :return:
     """
     argParser = argparse.ArgumentParser(description="Starts ZipDeploy with a periodic checking schedule.")
-    argParser.add_argument("content-url", type=str, help="Content url to fetch the zip file from")
+    argParser.add_argument("content_url", type=str, help="Content url to fetch the zip file from")
     argParser.add_argument("--content-destination", type=str, default=DEFAULT_DESTINATION_FOLDER, help="Folder to put the extracted zip file's contents in after the download.")
     argParser.add_argument('--update-interval', default="1800", type=int, help='Update interval in seconds.')
     args = argParser.parse_args()
