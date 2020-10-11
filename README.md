@@ -14,9 +14,8 @@ pip install simple-zip-deploy
 ```
 
 ## Usage
-```
 Windows CLI:
-
+```
 # Executes the check every 15 seconds
 zip-deploy.exe  --content-destination "./movies" --update-interval 15 "http://your-url.domain/movies.zip"
 ```
@@ -39,3 +38,14 @@ from zipdeploy.zipdeploy import ZipDeploy
 zd = ZipDeploy("http://your-url.domain/movies.zip", "/dev/shm/your/target/destination")
 zd.download_if_required()
 ```
+
+Using Docker:
+```
+# make sure to mount /your/target/destination into the container, if you plan to do something useful ;-)
+docker run ghcr.io/hgross/zip-deploy --content-destination /your/target/destination --update-interval 15 http://your-url.domain/movies.zip
+```
+
+## Disclaimer
+This project is my playground project to get to know GitHub Actions for automated package publishing/Release pipelines on GitHub.
+Don't expect maintenance, but feel free to use this tool if it helps you out. 
+I created it on a weekend for a friend who set up an [e-ink display project](https://github.com/TomWhitwell/SlowMovie) on his Raspberry Pi.
