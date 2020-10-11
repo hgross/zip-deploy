@@ -95,7 +95,7 @@ jobs:
       
         run: echo "${{ secrets.CR_PAT }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
-      - name: Push image to GitHub Container Registry
+      - name: Push image to GitHub Packages Registry
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository_owner }}/$IMAGE_NAME
 

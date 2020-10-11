@@ -5,10 +5,10 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='simple-zip-deploy',
-    version='0.1.4',
+    name='zip-deploy',
+    version='0.1.5',
     packages=find_packages(),
-    url='https://github.com/hgross/simple-zip-deploy',
+    url='https://github.com/hgross/zip-deploy',
     license='MIT',
     author='Henning Gross',
     author_email='mail.to@henning-gross.de',
