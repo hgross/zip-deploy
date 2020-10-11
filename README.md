@@ -1,7 +1,8 @@
 # simple-zip-deploy
 
-![Upload Python Package](https://github.com/hgross/simple-zip-deploy/workflows/Upload%20Python%20Package/badge.svg)
 [![PyPI version](https://badge.fury.io/py/simple-zip-deploy.svg)](https://badge.fury.io/py/simple-zip-deploy)
+![Upload Python Package](https://github.com/hgross/simple-zip-deploy/workflows/Upload%20Python%20Package/badge.svg)
+![Docker](https://github.com/hgross/simple-zip-deploy/workflows/Docker/badge.svg)
 
 Provides an easy way to fetch contents from a remote ZIP files and sync/extract them to a local destination dir.
 Note that during download and extraction the contents will not be consistent.
