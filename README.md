@@ -17,18 +17,18 @@ pip install simple-zip-deploy
 Windows CLI:
 
 # Executes the check every 15 seconds
-zip-deploy.exe --content-url "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
+zip-deploy.exe "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
 ```
 
 Unix cli:
 ```
 # Executes the check every 15 seconds
-zip-deploy --content-url "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
+zip-deploy "http://your-url.domain/movies.zip" --content-destination "./movies" --update-interval 15
 ```
 
 As python module:
 ````
-python -m zipdeploy.zipdeploy http://your-url.domain/movies.zip /dev/shm/your/target/destination
+python -m zipdeploy.zipdeploy http://your-url.domain/movies.zip  --content-destination /dev/shm/your/target/destination --update-interval 15
 ````
 
 In your own code (no periodic checks included, threading is your job):
