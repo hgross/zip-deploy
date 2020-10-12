@@ -1,0 +1,26 @@
+@startuml deployment-example
+
+node "Remote Server" <<device>> {
+    node "WebServer" as web_server {
+        file "content.zip" as content_zip {
+            file "file1" as f1_remote
+            file "file2" as f2_remote
+        }
+    }
+}
+
+
+node "MyApplication"  {
+    component "ZipDeploy" as zipdeploy
+    file "/my/content/destination" as destination_path {
+        file "file1" as f1_local
+        file "file2" as f2_local
+        file "etag" as etag_local
+    }
+}
+
+
+zipdeploy -(0- web_server : HTTP GET with ETag/Caching-headers
+zipdeploy --> destination_path : extracts content.zip\nafter download
+
+@enduml

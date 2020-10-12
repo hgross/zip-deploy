@@ -9,6 +9,8 @@ Note that during download and extraction the contents will not be consistent.
 Not thread-safe - so take care and check the documentation.
 If you use the cli, check the -h option for configurable options.
 
+![Deployment example](doc/deployment-example.png)
+
 ## Installation
 ```
 pip install zip-deploy
