@@ -43,7 +43,7 @@ zd.download_if_required()
 Using Docker:
 ```
 # make sure to mount /your/target/destination into the container, if you plan to do something useful ;-)
-docker run ghcr.io/hgross/zip-deploy --content-destination /your/target/destination --update-interval 15 http://your-url.domain/movies.zip
+docker run hgross/zip-deploy --content-destination /your/target/destination --update-interval 15 http://your-url.domain/movies.zip
 ```
 
 ## Disclaimer
