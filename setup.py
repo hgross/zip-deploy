@@ -12,19 +12,14 @@ setup(
     license='MIT',
     author='Henning Gross',
     author_email='mail.to@henning-gross.de',
-    description='Provides an easy way to fetch contents from a remote ZIP files and sync/extract them to a local destination dir.',
+    description=
+    'Provides an easy way to fetch contents from a remote ZIP files and sync/extract them to a local destination dir.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     entry_points={
-        'console_scripts': [
-            'zip-deploy = zipdeploy.zipdeploy:main_func'
-        ]
+        'console_scripts': ['zip-deploy = zipdeploy.zipdeploy:main_func']
     },
-    console=[
-        'zipdeploy/zipdeploy.py'
-    ],
-    keywords=[
-        'zip', 'deploy', 'cache'
-    ],
+    console=['zipdeploy/zipdeploy.py'],
+    keywords=['zip', 'deploy', 'cache'],
     python_requires='>=3.6',
 )
